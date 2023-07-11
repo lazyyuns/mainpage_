@@ -1,4 +1,4 @@
-const Title = (props) => {
+const Title = ({ img, maintxt, text }) => {
   const spanStyle = {
     color: '#090909',
     fontSize: '18px',
@@ -26,7 +26,7 @@ const Title = (props) => {
     <div style={{ paddingLeft: 41, paddingTop: 25 }}>
       <div>
         <img
-          src={props.img}
+          src={img}
           style={{
             width: '18px',
             height: '18px',
@@ -34,9 +34,9 @@ const Title = (props) => {
             display: 'inline-block',
           }}
         />
-        <span style={spanStyle}>{props.maintxt}</span>
+        <span style={spanStyle}>{maintxt}</span>
       </div>
-      <span style={subSpanStyle}>{props.text}</span>
+      <span style={subSpanStyle}>{text}</span>
     </div>
   );
 };

@@ -3,31 +3,24 @@ import Title from './Title';
 import Count from './Count';
 import styled from 'styled-components';
 import Box from './Box';
-
-const ParentContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 15px;
-`;
+import Application from './Application';
 
 const Views = () => {
   return (
-    <div>
+    <div style={{ display: 'inline-block' }}>
       <Box>
         <Title
           img="visibility.jpg"
           maintxt="누적 조회수"
           text="모든 영상의 조회수"
         ></Title>
-        <ParentContainer>
-          <Count money={2} />
-        </ParentContainer>
+        <Count money={'125K'} />
         <Title
           img="person.jpg"
           maintxt="구독자 수"
           text="내 채널을 구독한 유저 수"
         ></Title>
+        <Count money={12} />
       </Box>
     </div>
   );

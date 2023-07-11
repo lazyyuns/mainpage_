@@ -9,7 +9,6 @@ const spanStyle = {
   fontWeight: 700,
   lineHeight: 'normal',
   letterSpacing: 0.14,
-  marginLeft: 53,
   marginTop: 12,
   display: 'inline-block',
 };
@@ -19,6 +18,8 @@ const divStyle = {
   flexShrink: 0,
   borderRadius: 22.5,
   background: 'var(--dm-hover, #C4C5C6)',
+  display: 'flex',
+  justifyContent: 'center',
   marginTop: 20,
   marginLeft: 126,
 };

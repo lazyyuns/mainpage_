@@ -5,25 +5,17 @@ import Count from './Count';
 import styled from 'styled-components';
 import Application from './Application';
 import Box from './Box';
-const ParentContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 15px;
-`;
 
 const Earn = () => {
   return (
-    <div>
+    <div style={{ display: 'inline-block' }}>
       <Box>
         <Title
           img="Group.jpg"
           maintxt="예상 수익"
           text="모든 영상에서 발생한 수익"
         ></Title>
-        <ParentContainer>
-          <Count money={2} />
-        </ParentContainer>
+        <Count money={'$2'} />
         <Title
           img="Money.jpg"
           maintxt="수익 정산 신청"

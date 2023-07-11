@@ -5,15 +5,13 @@ const divStyle = {
   height: 311,
   flexShrink: 0,
   borderRadius: 30,
-  background: '#fff',
-  boxShadow: '0px 0px 4px 0px rgba(0, 0, 0, 0.1)',
-  marginTop: 40,
+  background: '#FFF',
+  boxShadow: '0px 0px 4px 0px rgba(0, 0, 0, 0.10)',
   marginLeft: 50,
-  display: 'inline-block',
 };
 
-const Box = () => {
-  return <div style={divStyle}></div>;
+const Box = ({ children }) => {
+  return <div style={divStyle}>{children}</div>;
 };
 
 export default Box;

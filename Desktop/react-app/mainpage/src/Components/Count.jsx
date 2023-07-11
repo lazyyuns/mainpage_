@@ -1,9 +1,8 @@
 import React from 'react';
 
-const Count = (props) => {
+const Count = ({ money, style }) => {
   const moneyStyle = {
     color: '#090909',
-    textAlign: 'center',
     fontSize: 36,
     fontFamily: 'Poppins',
     fontStyle: 'normal',
@@ -11,10 +10,16 @@ const Count = (props) => {
     lineHeight: 'normal',
     letterSpacing: 0.36,
     paddingTop: 15,
+    textAlign: style ? style.textAlign : 'center',
+    display: style ? style.display : 'flex',
+    justifyContent: style ? style.justifyContent : 'center',
+  };
+  const divStyle = {
+    ...style,
   };
   return (
-    <div>
-      <span style={moneyStyle}>${props.money}</span>
+    <div style={divStyle}>
+      <span style={moneyStyle}>{money}</span>
     </div>
   );
 };
