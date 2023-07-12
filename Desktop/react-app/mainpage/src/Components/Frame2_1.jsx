@@ -3,19 +3,26 @@ import Earn from './Earn';
 import Views from './Views';
 import Profitsum from './Profitsum';
 
-const divStyle = {
-  display: 'inline-block',
+const divStyle1 = {
   width: '838',
   height: '539',
+  display: 'flex',
+  flexdirection: 'column',
+};
+
+const divStyle2 = {
+  display: 'flex',
 };
 const Frame2_1 = () => {
   return (
-    <div style={divStyle}>
-      <div>
+    <div>
+      <div style={divStyle1}>
         <Earn />
         <Views />
       </div>
-      <Profitsum />
+      <div style={divStyle2}>
+        <Profitsum />
+      </div>
     </div>
   );
 };

@@ -22,7 +22,10 @@ const Profitsum = () => {
         maintxt="누적 수익"
         text="정산받은 모든 수익"
       ></Title>
-      <Count money={'$112'} style={{ textAlign: 'left' }} />
+      <Count
+        money={'$112'}
+        style={{ textAlign: 'left', paddingLeft: '41px' }}
+      />
     </div>
   );
 };
