@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Box2 = ({ colors, children }) => {
+const Box2 = ({ colors, style, children }) => {
   const divStyle = {
     width: 399,
     height: 200,
@@ -10,7 +10,11 @@ const Box2 = ({ colors, children }) => {
     background: colors,
     boxShadow: '0px 4px 4px 0px rgba(0, 0, 0, 0.10)',
     marginLeft: 40,
-    marginBottom: 25,
+    display: 'flex',
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+    ...style,
   };
 
   return <div style={divStyle}>{children}</div>;

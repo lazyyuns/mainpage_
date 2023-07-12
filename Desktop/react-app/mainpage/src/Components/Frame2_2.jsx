@@ -4,9 +4,17 @@ import FileUpload from './FileUpload';
 import Caution from './Caution';
 const Frame2_2 = () => {
   return (
-    <div style={{ display: 'inline-block', width: '399px', height: '539px' }}>
+    <div
+      style={{
+        display: 'flex',
+        width: '399px',
+        height: '539px',
+        flexDirection: 'row',
+        flexWrap: 'wrap',
+      }}
+    >
       <VideoUploade />
-      <FileUpload />
+      <FileUpload style={{ marginTop: '25px' }} />
       <Caution
         style={{ marginTop: '22px' }}
         img="error.jpg"

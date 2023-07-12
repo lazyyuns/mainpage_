@@ -25,15 +25,17 @@ const Title = ({ img, maintxt, text }) => {
   return (
     <div style={{ paddingLeft: 41, paddingTop: 25 }}>
       <div>
-        <img
-          src={img}
-          style={{
-            width: '18px',
-            height: '18px',
-            flexShrink: 0,
-            display: 'inline-block',
-          }}
-        />
+        {img && (
+          <img
+            src={img}
+            style={{
+              width: '18px',
+              height: '18px',
+              flexShrink: 0,
+              display: 'inline-block',
+            }}
+          />
+        )}
         <span style={spanStyle}>{maintxt}</span>
       </div>
       <span style={subSpanStyle}>{text}</span>

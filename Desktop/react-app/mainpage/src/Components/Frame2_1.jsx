@@ -8,6 +8,7 @@ const divStyle1 = {
   height: '539',
   display: 'flex',
   flexdirection: 'column',
+  justifyContent: 'space-between',
 };
 
 const divStyle2 = {
@@ -15,7 +16,7 @@ const divStyle2 = {
 };
 const Frame2_1 = () => {
   return (
-    <div>
+    <div style={{ marginLeft: '50px' }}>
       <div style={divStyle1}>
         <Earn />
         <Views />

@@ -1,8 +1,6 @@
 import React from 'react';
-import { MdInsights } from 'react-icons/md';
 import Title from './Title';
 import Count from './Count';
-import styled from 'styled-components';
 import Application from './Application';
 import Box from './Box';
 
