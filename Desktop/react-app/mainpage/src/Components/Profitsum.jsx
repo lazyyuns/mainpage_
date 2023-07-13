@@ -4,7 +4,6 @@ import Title from './Title';
 
 const Profitsum = () => {
   const divStyle = {
-    display: 'flex',
     width: 838,
     height: 198,
     top: 553,
@@ -21,6 +20,7 @@ const Profitsum = () => {
         img="Moneybox.jpg"
         maintxt="누적 수익"
         text="정산받은 모든 수익"
+        padding={29}
       ></Title>
       <Count
         money={'$112'}

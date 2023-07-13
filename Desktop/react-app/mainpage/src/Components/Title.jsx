@@ -1,4 +1,4 @@
-const Title = ({ img, maintxt, text }) => {
+const Title = ({ img, maintxt, text, padding }) => {
   const spanStyle = {
     color: '#090909',
     fontSize: '18px',
@@ -23,7 +23,7 @@ const Title = ({ img, maintxt, text }) => {
   };
 
   return (
-    <div style={{ paddingLeft: 41, paddingTop: 25 }}>
+    <div style={{ paddingLeft: 41, paddingTop: padding ?? '25px' }}>
       <div>
         {img && (
           <img
