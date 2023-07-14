@@ -10,6 +10,7 @@ const Text2 = ({ text }) => {
     fontWeight: 500,
     lineHeight: 18,
     letterSpacing: 0.12,
+  
   };
   return <span style={spanStyle}>{text}</span>;
 };
