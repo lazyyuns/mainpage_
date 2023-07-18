@@ -39,7 +39,7 @@ const Profitsum = () => {
           },
         ]}
         options={{
-          chart: { height: 115, width: 548, type: 'area' },
+          chart: { height: '115px', width: '548px', type: 'area' },
           dataLabels: {
             enabled: false,
           },

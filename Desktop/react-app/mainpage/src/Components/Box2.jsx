@@ -11,9 +11,9 @@ const Box2 = ({ colors, style, children }) => {
     boxShadow: '0px 4px 4px 0px rgba(0, 0, 0, 0.10)',
     marginLeft: 40,
     display: 'flex',
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    justifyContent: 'center',
+    flexDirection: 'column',
+    alignItems: 'center',
+
     ...style,
   };
 

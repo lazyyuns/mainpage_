@@ -27,6 +27,9 @@ const FileUpload = ({ style }) => {
     fontstyle: 'normal',
     fontWeight: 500,
     letterSpacing: 0.12,
+    width: 184,
+    height: 36,
+    marginTop: 24,
   };
 
   const buttonDivStyle = {
@@ -34,6 +37,7 @@ const FileUpload = ({ style }) => {
     alignItems: 'center',
     justifyContent: 'center',
     borderRadius: 3,
+    marginTop: 18,
   };
 
   const buttonStyle = {
@@ -52,7 +56,7 @@ const FileUpload = ({ style }) => {
   return (
     <div style={style}>
       <Box2 colors="#F3EFF9">
-        <div style={{ display: 'flex', alignItems: 'center' }}>
+        <div style={{ display: 'flex', alignItems: 'center', marginTop: 38 }}>
           <img src={'upload.jpg'} style={imgStyle} />
           <span style={spanStyle}>파일 직접 업로드</span>
         </div>

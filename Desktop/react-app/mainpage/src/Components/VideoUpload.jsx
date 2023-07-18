@@ -29,6 +29,11 @@ const VideoUploade = () => {
     fontstyle: 'normal',
     fontWeight: 500,
     letterSpacing: 0.12,
+    width: 170,
+    height: 36,
+    display: 'flex',
+    flexFlow: 'wrap',
+    marginTop: 26,
   };
 
   const buttonDivStyle = {
@@ -36,6 +41,7 @@ const VideoUploade = () => {
     alignItems: 'center',
     justifyContent: 'center',
     borderRadius: 3,
+    marginTop: 19,
   };
 
   const buttonStyle = {
