@@ -1,7 +1,6 @@
 import React from 'react';
 import Box2 from './Box2';
-import Title2 from './Title2';
-import Text2 from './Text2';
+
 import Button from './Button';
 const FileUpload = ({ style }) => {
   const imgStyle = {
@@ -51,7 +50,7 @@ const FileUpload = ({ style }) => {
   };
 
   return (
-    <div>
+    <div style={style}>
       <Box2 colors="#F3EFF9">
         <div style={{ display: 'flex', alignItems: 'center' }}>
           <img src={'upload.jpg'} style={imgStyle} />

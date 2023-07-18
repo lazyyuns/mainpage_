@@ -8,6 +8,7 @@ const VideoUploade = () => {
     width: 23,
     height: 23,
     flexShrink: 0,
+    backgroundColor: 'transparent',
   };
   const spanStyle = {
     color: 'var(--lm-main-text, #090909)',
@@ -53,7 +54,13 @@ const VideoUploade = () => {
   return (
     <div>
       <Box2 colors="#E7F5F8">
-        <div style={{ display: 'flex', alignItems: 'center' }}>
+        <div
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            marginTop: '37px',
+          }}
+        >
           <img src={'Youtube.jpg'} style={imgStyle} />
           <span style={spanStyle}>유튜브 URL로 빠른 업로드</span>
         </div>
