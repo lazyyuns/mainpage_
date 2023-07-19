@@ -27,7 +27,7 @@ const FileUpload = ({ style }) => {
     fontstyle: 'normal',
     fontWeight: 500,
     letterSpacing: 0.12,
-    width: 184,
+    width: 160,
     height: 36,
     marginTop: 24,
   };

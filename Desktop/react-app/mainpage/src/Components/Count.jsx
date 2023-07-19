@@ -12,7 +12,7 @@ const Count = ({ money, style, margin = '15px' }) => {
     textAlign: style ? style.textAlign : 'center',
     display: style ? style.display : 'flex',
     justifyContent: style ? style.justifyContent : 'center',
-    marginTop: margin,
+    marginTop: margin
   };
   const divStyle = {
     ...style,

@@ -1,7 +1,7 @@
-import React from 'react';
 import Count from './Count';
 import Title from './Title';
-import ApexCharts from 'react-apexcharts';
+import React, { useState } from 'react';
+import ReactApexChart from 'react-apexcharts';
 
 const Profitsum = () => {
   const divStyle = {
@@ -15,6 +15,44 @@ const Profitsum = () => {
     marginTop: 30,
     display: 'flex',
   };
+  const initialChartData = {
+    series: [
+      {
+        name: 'profit',
+        data: [0, 0, 0, 0, 3, 5, 9, 10, 11],
+      },
+    ],
+    options: {
+      chart: {
+        height: 115,
+        type: 'area',
+        width: 548,
+        flexShrink: 0,
+        zoom: {
+          enabled: false,
+        },
+      },
+      dataLabels: {
+        enabled: false,
+      },
+      stroke: {
+        curve: 'straight',
+      },
+      grid: {
+        row: {
+          colors: ['transparent'],
+          opacity: 1,
+        },
+      },
+      colors: ['#5100CE'], // 그라데이션 효과를 제거하고 단일 색상으로 설정
+      yaxis: {
+        opposite: true,
+        forceNiceScale: true,
+      },
+    },
+  };
+
+  const [chartData] = useState(initialChartData);
 
   return (
     <div style={divStyle}>
@@ -28,45 +66,15 @@ const Profitsum = () => {
         <Count
           money={'$112'}
           margin={30}
-          style={{ textAlign: 'left', paddingLeft: '41px' }}
+          style={{ textAlign: 'left', paddingLeft: '41px', marginTop: '14px' }}
         />
       </div>
-      <ApexCharts
-        series={[
-          {
-            name: 'series1',
-            data: [31, 40, 28, 51, 42, 109, 100],
-          },
-        ]}
-        options={{
-          chart: { height: '115px', width: '548px', type: 'area' },
-          dataLabels: {
-            enabled: false,
-          },
-          stroke: {
-            curve: 'smooth',
-          },
-          xaxis: {
-            type: 'datetime',
-            categories: [
-              '2018-09-19T00:00:00.000Z',
-              '2018-09-19T01:30:00.000Z',
-              '2018-09-19T02:30:00.000Z',
-              '2018-09-19T03:30:00.000Z',
-              '2018-09-19T04:30:00.000Z',
-              '2018-09-19T05:30:00.000Z',
-              '2018-09-19T06:30:00.000Z',
-            ],
-          },
-          tooltip: {
-            x: {
-              format: 'dd/MM/yy HH:mm',
-            },
-          },
-        }}
-      >
-        {' '}
-      </ApexCharts>
+      <ReactApexChart
+        options={chartData.options}
+        series={chartData.series}
+        type="area"
+        height={215}
+      />
     </div>
   );
 };
