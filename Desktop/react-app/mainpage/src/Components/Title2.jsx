@@ -17,7 +17,7 @@ const Title2 = ({ img, text }) => {
     marginLeft: 7,
   };
   return (
-    <div style={{ display: 'flex', marginTop: '37px' }}>
+    <div style={{ display: 'inline-flex', marginTop: '37px' }}>
       <img src={img} style={imgStyle} />
       <span style={spanStyle}>{text}</span>
     </div>

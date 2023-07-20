@@ -15,6 +15,7 @@ const Profitsum = () => {
     marginTop: 30,
     display: 'flex',
   };
+
   const initialChartData = {
     series: [
       {
@@ -26,8 +27,8 @@ const Profitsum = () => {
       chart: {
         height: 115,
         type: 'area',
-        width: 548,
         flexShrink: 0,
+        display: 'flex',
         zoom: {
           enabled: false,
         },
@@ -44,10 +45,18 @@ const Profitsum = () => {
           opacity: 1,
         },
       },
-      colors: ['#5100CE'], // 그라데이션 효과를 제거하고 단일 색상으로 설정
+      colors: ['#5100CE'],
+      xaxis: {
+        labels: {
+          show: false,
+        },
+      },
       yaxis: {
         opposite: true,
         forceNiceScale: true,
+        labels: {
+          show: false, 
+        },
       },
     },
   };
@@ -56,25 +65,28 @@ const Profitsum = () => {
 
   return (
     <div style={divStyle}>
-      <div>
+      <div style={{ flex: 1 }}>
         <Title
           img="Moneybox.jpg"
           maintxt="누적 수익"
           text="정산받은 모든 수익"
           padding={29}
-        ></Title>
+        />
         <Count
           money={'$112'}
           margin={30}
           style={{ textAlign: 'left', paddingLeft: '41px', marginTop: '14px' }}
         />
       </div>
-      <ReactApexChart
-        options={chartData.options}
-        series={chartData.series}
-        type="area"
-        height={215}
-      />
+      <div style={{ flex: 3 }}>
+        <ReactApexChart
+          options={chartData.options}
+          series={chartData.series}
+          type="area"
+          height={170}
+          width = {550}
+        />
+      </div>
     </div>
   );
 };
