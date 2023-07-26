@@ -26,9 +26,9 @@ const divStyle = {
 
 const Application = () => {
   return (
-    <div style={divStyle}>
+    <button style={divStyle}>
       <span style={spanStyle}>신청하기</span>
-    </div>
+    </button>
   );
 };
 

@@ -3,6 +3,7 @@
 .App {
   font-family: 'Poppins', sans-serif;
   font-family: 'Roboto', sans-serif;
+ 
 }
 
 .Home-box {
@@ -81,3 +82,4 @@
   flex-shrink: 0;
   display: inline-block;
 }
+

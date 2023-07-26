@@ -1,9 +1,7 @@
 import React from 'react';
 import Title from './Title';
 import Count from './Count';
-import styled from 'styled-components';
 import Box from './Box';
-import Application from './Application';
 
 const Views = () => {
   return (

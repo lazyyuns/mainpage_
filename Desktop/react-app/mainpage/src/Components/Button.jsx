@@ -1,6 +1,7 @@
 import React from 'react';
 
-const Button = ({ color, text ,width }) => {
+const Button = ({ color, text ,width, onChange }) => {
+
   const divStyle = {
     display: 'inline-flex',
     padding: "7px 18px",
@@ -22,10 +23,14 @@ const Button = ({ color, text ,width }) => {
     lineHeight: 'normal',
     letterSpacing: 0.12,
   };
+  const onClick = () => {
+    console.log('Not an accessible button');
+  };
   return (
-    <div style={divStyle}>
+    <label style={divStyle}>
+      <input type="file" style={{ display: "none" }} onChange={onChange} />
       <span style={spanStyle}>{text}</span>
-    </div>
+    </label>
   );
 };
 

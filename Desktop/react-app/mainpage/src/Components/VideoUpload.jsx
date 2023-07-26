@@ -1,7 +1,7 @@
 import React from 'react';
 import Box2 from './Box2';
-
 import Button from './Button';
+
 
 const VideoUploade = () => {
   const imgStyle = {
